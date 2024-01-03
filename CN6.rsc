@@ -503,6 +503,7 @@ add list=CN address=2401:5c20::/32 comment=AS4809
 add list=CN address=2401:5c60::/32 comment=AS4809
 add list=CN address=2401:5c80::/32 comment=AS4809
 add list=CN address=2401:5fa0::/32 comment=AS4809
+add list=CN address=2401:70e0::/32 comment=AS4809
 add list=CN address=2401:7180::/32 comment=AS4809
 add list=CN address=2401:71c0::/32 comment=AS4809
 add list=CN address=2401:7240::/32 comment=AS4809
