@@ -6240,6 +6240,7 @@ add list=CN address=158.140.252.0/22 comment=AS4809
 add list=CN address=159.27.0.0/16 comment=AS4809
 add list=CN address=159.75.0.0/16 comment=AS4809
 add list=CN address=159.226.0.0/16 comment=AS4809
+add list=CN address=160.19.76.0/23 comment=AS4809
 add list=CN address=160.19.208.0/22 comment=AS4809
 add list=CN address=160.19.212.0/22 comment=AS4809
 add list=CN address=160.19.216.0/22 comment=AS4809
