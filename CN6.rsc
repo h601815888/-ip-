@@ -30,7 +30,6 @@ add list=CN address=2001:df0:2e00::/48 comment=AS4809
 add list=CN address=2001:df0:2e80::/48 comment=AS4809
 add list=CN address=2001:df0:59c0::/48 comment=AS4809
 add list=CN address=2001:df0:85c0::/48 comment=AS4809
-add list=CN address=2001:df0:8d40::/48 comment=AS4809
 add list=CN address=2001:df0:9d40::/48 comment=AS4809
 add list=CN address=2001:df0:ac40::/48 comment=AS4809
 add list=CN address=2001:df0:b180::/48 comment=AS4809
