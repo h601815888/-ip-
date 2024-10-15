@@ -923,7 +923,6 @@ add list=CN address=2403:24c0::/32 comment=AS4809
 add list=CN address=2403:2580::/32 comment=AS4809
 add list=CN address=2403:25c0::/32 comment=AS4809
 add list=CN address=2403:2680::/32 comment=AS4809
-add list=CN address=2403:26c0::/32 comment=AS4809
 add list=CN address=2403:2740::/32 comment=AS4809
 add list=CN address=2403:2780::/32 comment=AS4809
 add list=CN address=2403:28c0::/32 comment=AS4809
