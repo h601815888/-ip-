@@ -645,6 +645,7 @@ add list=CN address=2401:d340::/32 comment=AS4809
 add list=CN address=2401:d420::/32 comment=AS4809
 add list=CN address=2401:d780::/32 comment=AS4809
 add list=CN address=2401:d7e0::/32 comment=AS4809
+add list=CN address=2401:d8e0::/32 comment=AS4809
 add list=CN address=2401:da00::/32 comment=AS4809
 add list=CN address=2401:de00::/32 comment=AS4809
 add list=CN address=2401:e080::/32 comment=AS4809
