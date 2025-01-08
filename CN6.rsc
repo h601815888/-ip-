@@ -44,7 +44,6 @@ add list=CN address=2001:df1:5fc0::/48 comment=AS4809
 add list=CN address=2001:df1:6180::/48 comment=AS4809
 add list=CN address=2001:df1:61c0::/48 comment=AS4809
 add list=CN address=2001:df1:a100::/48 comment=AS4809
-add list=CN address=2001:df1:bd80::/48 comment=AS4809
 add list=CN address=2001:df1:c900::/48 comment=AS4809
 add list=CN address=2001:df1:d180::/48 comment=AS4809
 add list=CN address=2001:df1:da00::/48 comment=AS4809
