@@ -92,7 +92,6 @@ add list=CN address=2001:df5:4cc0::/48 comment=AS4809
 add list=CN address=2001:df5:5f80::/48 comment=AS4809
 add list=CN address=2001:df5:7800::/48 comment=AS4809
 add list=CN address=2001:df6:100::/48 comment=AS4809
-add list=CN address=2001:df6:3d00::/48 comment=AS4809
 add list=CN address=2001:df6:5d00::/48 comment=AS4809
 add list=CN address=2001:df6:6800::/48 comment=AS4809
 add list=CN address=2001:df6:f400::/48 comment=AS4809
@@ -922,7 +921,6 @@ add list=CN address=2403:1580::/32 comment=AS4809
 add list=CN address=2403:16c0::/32 comment=AS4809
 add list=CN address=2403:17c0::/32 comment=AS4809
 add list=CN address=2403:1980::/32 comment=AS4809
-add list=CN address=2403:1a40::/32 comment=AS4809
 add list=CN address=2403:1b80::/32 comment=AS4809
 add list=CN address=2403:1c80::/32 comment=AS4809
 add list=CN address=2403:1d80::/32 comment=AS4809
