@@ -7094,6 +7094,7 @@ add list=CN address=202.134.212.0/22 comment=AS4809
 add list=CN address=202.134.216.0/22 comment=AS4809
 add list=CN address=202.134.220.0/22 comment=AS4809
 add list=CN address=202.136.48.0/20 comment=AS4809
+add list=CN address=202.136.80.0/23 comment=AS4809
 add list=CN address=202.136.208.0/20 comment=AS4809
 add list=CN address=202.136.224.0/20 comment=AS4809
 add list=CN address=202.136.248.0/22 comment=AS4809
