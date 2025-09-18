@@ -1748,7 +1748,6 @@ add list=CN address=2406:8d80::/32 comment=AS4809
 add list=CN address=2406:8e80::/32 comment=AS4809
 add list=CN address=2406:8f40::/32 comment=AS4809
 add list=CN address=2406:8f80::/32 comment=AS4809
-add list=CN address=2406:9180::/32 comment=AS4809
 add list=CN address=2406:9200::/32 comment=AS4809
 add list=CN address=2406:9380::/32 comment=AS4809
 add list=CN address=2406:9480::/32 comment=AS4809
