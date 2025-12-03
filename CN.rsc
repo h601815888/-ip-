@@ -6080,6 +6080,7 @@ add list=CN address=144.79.4.0/23 comment=AS4809
 add list=CN address=144.79.10.0/23 comment=AS4809
 add list=CN address=144.79.28.0/23 comment=AS4809
 add list=CN address=144.79.42.0/23 comment=AS4809
+add list=CN address=144.79.54.0/23 comment=AS4809
 add list=CN address=144.123.0.0/16 comment=AS4809
 add list=CN address=144.255.0.0/16 comment=AS4809
 add list=CN address=146.56.192.0/18 comment=AS4809
