@@ -25,7 +25,6 @@ add list=CN address=2001:df0:423::/48 comment=AS4809
 add list=CN address=2001:df0:9c0::/48 comment=AS4809
 add list=CN address=2001:df0:1bc0::/48 comment=AS4809
 add list=CN address=2001:df0:25c0::/48 comment=AS4809
-add list=CN address=2001:df0:26c0::/48 comment=AS4809
 add list=CN address=2001:df0:2e00::/48 comment=AS4809
 add list=CN address=2001:df0:2e80::/48 comment=AS4809
 add list=CN address=2001:df0:59c0::/48 comment=AS4809
