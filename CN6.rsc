@@ -1295,7 +1295,6 @@ add list=CN address=2404:8580::/32 comment=AS4809
 add list=CN address=2404:8700::/32 comment=AS4809
 add list=CN address=2404:8880::/32 comment=AS4809
 add list=CN address=2404:8a80::/32 comment=AS4809
-add list=CN address=2404:8b00::/32 comment=AS4809
 add list=CN address=2404:8dc0::/32 comment=AS4809
 add list=CN address=2404:9340::/32 comment=AS4809
 add list=CN address=2404:9b80::/32 comment=AS4809
