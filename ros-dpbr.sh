@@ -1,28 +1,53 @@
-#!/bin/sh
-mkdir -p ./pbr
-cd ./pbr
+name: Merge IP List
 
-# AS4809 BGP
-wget --no-check-certificate -c -O CN.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt
-wget --no-check-certificate -c -O CN6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
+on:
+  schedule:
+    - cron: "0 3 * * *"   # 每天自动跑（UTC时间）
+  workflow_dispatch:       # 也可以手动触发
 
-{
-echo "/ip firewall address-list"
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-for net in $(cat CN.txt) ; do
-  echo "add list=CN address=$net comment=AS4809"
-done
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
 
-} > ../CN.rsc
+    - name: Download IP Lists
+      run: |
+        mkdir work
+        cd work
 
-{
-echo "/ip firewall address6-list"
+        # 下载两个来源（自己改URL）
+        wget -q -O CN1.rsc https://raw.githubusercontent.com/soffchen/GeoIP2-CN/release/CN-ip-cidr.txt
+        wget -q -O CN2.rsc https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt
 
-for net in $(cat CN6.txt) ; do
-  echo "add list=CN address=$net comment=AS4809"
-done
+    - name: Extract and Merge IPv4
+      run: |
+        cd work
 
-} > ../CN6.rsc
+        # 提取 address 字段
+        cat CN1.rsc CN2.rsc \
+        | grep 'address=' \
+        | sed -E 's/.*address=([^ ]+).*/\1/' \
+        | sort -u > CN.txt
 
-cd ..
-rm -rf ./pbr
+    - name: Generate RSC
+      run: |
+        cd work
+
+        {
+        echo "/ip firewall address-list"
+        while read net; do
+          echo "add list=CN address=$net comment=auto"
+        done < CN.txt
+        } > ../CN.rsc
+
+    - name: Commit & Push
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+
+        git add CN.rsc
+        git commit -m "auto update CN list" || echo "no changes"
+        git push
