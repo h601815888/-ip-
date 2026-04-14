@@ -1,68 +1,28 @@
-name: Merge IPv4 Address List
+#!/bin/sh
+mkdir -p ./pbr
+cd ./pbr
 
-on:
-  schedule:
-    - cron: "0 3 * * *"   # 每天自动运行（UTC时间）
-  workflow_dispatch:
+# AS4809 BGP
+wget --no-check-certificate -c -O CN.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt
+wget --no-check-certificate -c -O CN6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+{
+echo "/ip firewall address-list"
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+for net in $(cat CN.txt) ; do
+  echo "add list=CN address=$net comment=AS4809"
+done
 
-    - name: Download Source Files
-      run: |
-        mkdir work
-        cd work
+} > ../CN.rsc
 
-        # 👉 改成你的两个来源
-        wget -q -O CN1.rsc https://raw.githubusercontent.com/soffchen/GeoIP2-CN/release/CN-ip-cidr.txt
-        wget -q -O CN2.rsc https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt
+{
+echo "/ip firewall address6-list"
 
-        echo "=== 下载完成 ==="
-        ls -lh
+for net in $(cat CN6.txt) ; do
+  echo "add list=CN address=$net comment=AS4809"
+done
 
-    - name: Extract IPv4 and Deduplicate
-      run: |
-        cd work
+} > ../CN6.rsc
 
-        # 提取 address 字段（兼容所有格式）
-        cat CN1.rsc CN2.rsc \
-        | grep -oE 'address=[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/[0-9]+' \
-        | cut -d= -f2 \
-        | sort -u > CN.txt
-
-        echo "=== 提取完成 ==="
-        wc -l CN.txt
-
-        # 防止空文件（关键保护）
-        if [ ! -s CN.txt ]; then
-          echo "❌ 错误：没有提取到任何 IPv4 地址"
-          exit 1
-        fi
-
-    - name: Generate RSC File
-      run: |
-        cd work
-
-        {
-        echo "/ip firewall address-list"
-        awk '{print "add list=CN address="$1" comment=auto"}' CN.txt
-        } > ../CN.rsc
-
-        echo "=== 生成完成 ==="
-        head -n 5 ../CN.rsc
-
-    - name: Commit and Push
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "actions@github.com"
-
-        git add CN.rsc
-
-        git commit -m "auto update CN IPv4 list" || echo "no changes"
-
-        git push
+cd ..
+rm -rf ./pbr
