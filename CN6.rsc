@@ -755,6 +755,7 @@ add list=CN address=2402:52c0::/32 comment=AS4809
 add list=CN address=2402:5340::/32 comment=AS4809
 add list=CN address=2402:5820::/32 comment=AS4809
 add list=CN address=2402:5880::/32 comment=AS4809
+add list=CN address=2402:5920::/32 comment=AS4809
 add list=CN address=2402:5940::/32 comment=AS4809
 add list=CN address=2402:59c0::/32 comment=AS4809
 add list=CN address=2402:5a40::/32 comment=AS4809
@@ -1638,7 +1639,6 @@ add list=CN address=2406:3280::/32 comment=AS4809
 add list=CN address=2406:3300::/32 comment=AS4809
 add list=CN address=2406:3340::/32 comment=AS4809
 add list=CN address=2406:3380::/32 comment=AS4809
-add list=CN address=2406:3440::/32 comment=AS4809
 add list=CN address=2406:3480::/32 comment=AS4809
 add list=CN address=2406:34c0::/32 comment=AS4809
 add list=CN address=2406:3580::/32 comment=AS4809
