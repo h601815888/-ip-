@@ -1535,7 +1535,6 @@ add list=CN address=2405:9b80::/32 comment=AS4809
 add list=CN address=2405:9bc0::/32 comment=AS4809
 add list=CN address=2405:9e00::/32 comment=AS4809
 add list=CN address=2405:a240::/32 comment=AS4809
-add list=CN address=2405:a3c0::/32 comment=AS4809
 add list=CN address=2405:a500::/32 comment=AS4809
 add list=CN address=2405:a680::/32 comment=AS4809
 add list=CN address=2405:a900::/32 comment=AS4809
