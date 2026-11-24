@@ -806,6 +806,7 @@ add list=CN address=2402:8180::/32 comment=AS4809
 add list=CN address=2402:8260::/32 comment=AS4809
 add list=CN address=2402:8300::/32 comment=AS4809
 add list=CN address=2402:8380::/32 comment=AS4809
+add list=CN address=2402:8420::/32 comment=AS4809
 add list=CN address=2402:85c0::/32 comment=AS4809
 add list=CN address=2402:8800::/32 comment=AS4809
 add list=CN address=2402:8840::/32 comment=AS4809
